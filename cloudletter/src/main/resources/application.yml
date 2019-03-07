@@ -1,0 +1,39 @@
+server:
+  port: 8091
+  session-timeout: 30
+  tomcat.max-threads: 0
+  tomcat.uri-encoding: UTF-8
+
+spring:
+  datasource:
+    driver-class-name : com.mysql.jdbc.Driver
+    url : jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&autoReconnect=true&failOverReadOnly=false
+    username : root
+    password : 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  thymeleaf:
+    prefix: classpath:/static
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+
+    mvc:
+      static-path-pattern: /**
+    http:
+      multipart:
+        location: F://preview
+    resources:   # 指定静态资源的路径
+      static-locations: classpath:/static/
+
+    devtools:
+      restart:
+        enabled: true  #设置开启热部署
+    freemarker:
+      cache: false    #页面不加载缓存，修改即时生效
+mybatis:
+  mapper-locations: classpath:/mybatis/*Mapper.xml
+  type-aliases-package: com.boot.domain
+

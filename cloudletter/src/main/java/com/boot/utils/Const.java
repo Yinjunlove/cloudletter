@@ -1,8 +1,7 @@
 package com.boot.utils;
 
 /**
- * 项目名称：
- * 修改日期：2015/11/2
+ * 存放常量的工具类
  */
 public class Const {
 

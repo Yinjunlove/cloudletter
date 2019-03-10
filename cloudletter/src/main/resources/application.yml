@@ -9,7 +9,7 @@ spring:
     driver-class-name : com.mysql.jdbc.Driver
     url : jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&autoReconnect=true&failOverReadOnly=false
     username : root
-    password : 123456
+    password : root
     type: com.alibaba.druid.pool.DruidDataSource
 
   thymeleaf:
@@ -34,6 +34,6 @@ spring:
     freemarker:
       cache: false    #页面不加载缓存，修改即时生效
 mybatis:
-  mapper-locations: classpath:/mybatis/*Mapper.xml
-  type-aliases-package: com.boot.domain
+  mapper-locations: classpath:/mybatis/**/*.xml
+  type-aliases-package: com.boot.*.dao
 

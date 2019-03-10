@@ -1,6 +1,7 @@
-package com.boot.controller.letter;
+package com.boot.letter.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,16 +20,16 @@ public class LetterController {
     @ResponseBody
     public ModelAndView getList() throws Exception{
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("/views/letter/list");
+        mv.setViewName("/views/letter/index");
         return mv;
     }
 
 
     @RequestMapping(value = "/edit")
     @ResponseBody
-    public ModelAndView edit() throws Exception{
+    public ModelAndView edit(Model model) throws Exception{
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("/views/letter/edit");
+        mv.setViewName("/views/letter/index");
         return mv;
     }
 }

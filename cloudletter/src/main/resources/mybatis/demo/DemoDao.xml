@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boot.demo.dao.DemoDao">
+    <select id="getDemoList" parameterType="java.util.Map" resultType="com.boot.demo.domain.DemoInfo">
+        SELECT * FROM
+        demo
+        where record_status = 0
+        <if test="uuid!=null and uuid!=''">
+            and uuid = #{uuid}
+        </if>
+    </select>
+</mapper>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<link rel="stylesheet" href="../../css/main.css" />
+<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+<script type="text/javascript" src="../../js/jquery-3.3.1.min.js" ></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js" ></script>
+<body>
+    <table class="table table-hover">
+        <thead>
+            <th>#</th>
+            <th>uuid</th>
+            <th>创建时间</th>
+            <th>排序</th>
+            <th>内容</th>
+            <th>备注</th>
+        </thead>
+        <tbody  th:each="item,state : ${list}">
+            <td th:text="${state.count}"></td>
+            <td th:text="${item.uuid}"></td>
+            <td th:text="${#dates.format(item.create_date, 'yyyy-MM-dd')}"></td>
+            <td th:text="${item.sort}"></td>
+            <td th:text="${item.content}"></td>
+            <td th:text="${item.comment}"></td>
+        </tbody>
+    </table>
+</body>
+</html>

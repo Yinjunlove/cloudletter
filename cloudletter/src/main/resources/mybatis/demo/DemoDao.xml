@@ -2,6 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.boot.demo.dao.DemoDao">
+    <resultMap id="resultDemoMap" type="com.boot.demo.domain.DemoInfo">
+        <id property="id" column="id" />
+        <result property="uuid" column="uuid"/>
+        <result property="creater" column="creater"/>
+        <result property="editor" column="editor"/>
+        <result property="create_date" column="create_date"/>
+        <result property="edit_date" column="edit_date"/>
+        <result property="record_status" column="record_status"/>
+        <result property="sort" column="sort"/>
+        <result property="content" column="content"/>
+        <result property="comment" column="comment"/>
+    </resultMap>
     <select id="getDemoList" parameterType="java.util.Map" resultType="com.boot.demo.domain.DemoInfo">
         SELECT * FROM
         demo

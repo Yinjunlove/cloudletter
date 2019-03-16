@@ -21,7 +21,8 @@ public class DemoController {
     @ResponseBody
     public ModelAndView demo(){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("/views/demo/demolist");
+//        mv.setViewName("/views/demo/demolist");
+        mv.setViewName("/views/admin/login");
         String uuid = "1111111111111111";
         Map param = new HashMap();
         param.put("uuid",uuid);

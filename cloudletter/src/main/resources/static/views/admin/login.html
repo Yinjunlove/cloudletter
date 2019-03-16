@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>登录页面</title>
+	</head>
+	<link rel="stylesheet" href="../../css/main.css" />
+	<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js" ></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js" ></script>
+	<body>
+		<div class="container">
+			<div class="login">
+				<!-- 左边的图片 -->
+				<div class="login-left"></div>
+				<!-- 右边的登录 -->
+				<div class="login-right">
+					<!-- 切换登录模式 -->
+					<div class="login-switch">
+						<h2 class="login-h">登录</h2>
+						<span class="login-switch-text" onclick="switchLoginType(1)">微信</span>
+						<span class="login-switch-text" onclick="switchLoginType(2)">手机号</span>
+					</div>
+					<!-- 手机号登录 -->
+					<div class="login-from" id="ipone">
+						<div class="login-from-group">
+							<label class="login-from-label">登录名</label>
+							<input class="login-from-input" type="text" id="name" name="name" placeholder="请输入手机号" maxlength="11"/>
+						</div>
+						<div class="login-from-group">
+							<label class="login-from-label">密码</label>
+							<input class="login-from-input" type="password" id="password" name="password" placeholder="请输入密码"/>
+						</div>
+						<!-- 提示 -->
+						<div class="tip">请填写登录名</div>
+						<div class="login-from-group">
+							<p class="login-from-p">
+								<span class="login-from-button">登录</span> 
+								<span class="login-from-button">忘记密码</span>
+							</p>
+						</div>
+					</div>
+					<!-- 微信二维码登录 -->
+					<div class="login-from" id="qrcode" style="display: none;">
+						<div class="login-qrcode">
+							<img src="../../img/qrcode.png" class="login-qrcode-img"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function switchLoginType(type){
+		if(type==1){
+			$("#ipone").css("display","none");
+			$("#qrcode").css("display","block");
+		}
+		if(type==2){
+			$("#ipone").css("display","block");
+			$("#qrcode").css("display","none");
+		}
+	}
+</script>

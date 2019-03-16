@@ -64,3 +64,93 @@ html,body{
 	color: #449d44;
 	font-weight: bolder;
 }
+
+/* 登录页面 */
+.login{
+	margin: 100px auto 0;
+	width: 700px;
+	height: 400px;
+	border: dotted 2px #CCCCCC;
+	background-color: #bd9d6a;
+}
+.login-left{
+	float: left;
+	margin: 50px 30px;
+	width: 280px;
+	height: 300px;
+	background: url(../img/login.png);
+	background-size: 100% 100%;
+}
+.login-right{
+	float: right;
+	width: 350px;
+	height: 100%;
+}
+.login-switch{
+	margin: 30px 0 10px 0;
+	text-align: center;
+	font-family: cursive;
+}
+.login-h{
+	margin-bottom: 20px;
+}
+.login-switch-text{
+	margin: 0 7px;
+	padding: 7px 30px;
+	font-size: 18px;
+	color: #FFFFFF;
+	background-color: #dc4c4c;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.switch-active{
+	background-color: #c52f2f;
+}
+.login-switch-text:hover{
+	background-color: #c52f2f;
+}
+.login-from-group{
+	margin: 30px 0 30px 60px; 
+	height: 50px;
+}
+.login-from-label{
+	width: 20%;
+}
+.login-from-input{
+	width: 80%;
+	padding: 3px 10px;
+}
+.login-from-p{
+	margin-top: 50px;
+}
+.tip{
+	font-size: 12px;
+    position: absolute;
+    margin: -20px 0 0 60px;
+    color: #000000;
+    font-style: oblique;
+}
+.login-from-button{
+	margin-right: 10px;
+	padding: 8px 18px;
+	background-color: #45b7fe;
+	border: none;
+	color: #FFFFFF;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.login-from-button:hover{
+	background-color: #099cf8;
+}
+.login-qrcode{
+	margin: 50px auto 0;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    background-color: #FFFFFF;
+}
+.login-qrcode-img{
+	margin-top: 5px;
+    width: 140px;
+    height: 140px;
+}
